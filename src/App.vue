@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>TODOリスト</h1>
+    <h1>BOX SHADOW 生成ツール</h1>
 
   </div>
 </template>
