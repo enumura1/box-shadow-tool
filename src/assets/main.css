@@ -7,7 +7,7 @@ body {
 
 #topContainer,
 #bottomContainer {
-  height: 10vh;
+  height: 4.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,5 +40,32 @@ h1 {
 #rightContainer {
   height: 80%;
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   background-color: aqua;
+}
+
+.slider {
+  width: 70%;
+}
+
+#settingValueContainer {
+  width: 85%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+
+#codeContainer {
+  width: 90%;
+  height: 20%;
+  margin-top: 5%;
+  background-color: antiquewhite;
+  text-align: center;
 }
