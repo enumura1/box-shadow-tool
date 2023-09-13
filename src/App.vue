@@ -14,14 +14,14 @@
           <input v-model="sliderRight" class="slider" type="range">
           <input v-model="sliderBottom" class="slider" type="range">
           <input v-model="sliderLeft" class="slider" type="range">
-          <input v-model="sliderTop" type="color">
+          <input type="color">
         </div>
         <div id="codeContainer">
-          <h5>コード</h5>
-          <p>{{ sliderTop }}</p>
-          <p>{{ sliderRight }}</p>
-          <p>{{ sliderBottom }}</p>
-          <p>{{ sliderLeft }}</p>
+          <h5>CSSコード</h5>
+          <p class="generatedCssCode">{{ sliderTop }}</p>
+          <p class="generatedCssCode">{{ sliderRight }}</p>
+          <p class="generatedCssCode">{{ sliderBottom }}</p>
+          <p class="generatedCssCode">{{ sliderLeft }}</p>
         </div>
       </div>
     </div>
