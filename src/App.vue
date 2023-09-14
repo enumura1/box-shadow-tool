@@ -5,7 +5,8 @@
     </div>
     <div id="mainContainer">
       <div id="leftContainer">
-        <div id="cssAttachedSquare"></div>
+        <!-- 動的にbox-shadowプロパティを更新する四角形 -->
+        <div id="cssAttachedSquare" :style="boxShadowStyle"></div>
       </div>
       <div id="rightContainer">
         <div id="settingValueContainer">
@@ -41,10 +42,12 @@ export default {
       sliderLeft: "",
     };
   },
+  computed: {
+    boxShadowStyle() {
+      // 各パラメーターにsliderTopの値を使用してbox-shadowを生成
+      return `box-shadow: 0 ${this.sliderTop}px 0 rgba(0, 0, 0, 0.5);`;
+    },
+  },
   methods: {},
 };
 </script>
-
-<style>
-/* ここにスタイルを追加 */
-</style>
