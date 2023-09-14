@@ -13,16 +13,16 @@
           <h1>設定値</h1>
           <input v-model="sliderTop" class="slider" type="range" min="-50" max="50">
           <input v-model="sliderRight" class="slider" type="range" min="-50" max="50">
-          <input v-model="sliderBottom" class="slider" type="range">
-          <input v-model="sliderLeft" class="slider" type="range">
+          <input v-model="sliderBlurRadius" class="slider" type="range" min="-50" max="50">
+          <input v-model="sliderSpreadRadius" class="slider" type="range" min="-50" max="50">
           <input type="color">
         </div>
         <div id="codeContainer">
           <h5>CSSコード</h5>
           <p class="generatedCssCode">{{ sliderTop }}</p>
           <p class="generatedCssCode">{{ sliderRight }}</p>
-          <p class="generatedCssCode">{{ sliderBottom }}</p>
-          <p class="generatedCssCode">{{ sliderLeft }}</p>
+          <p class="generatedCssCode">{{ sliderBlurRadius }}</p>
+          <p class="generatedCssCode">{{ sliderSpreadRadius }}</p>
         </div>
       </div>
     </div>
@@ -38,14 +38,15 @@ export default {
     return {
       sliderTop: 0,
       sliderRight: 0,
-      sliderBottom: "",
-      sliderLeft: "",
+      sliderBlurRadius: 0,
+      sliderSpreadRadius: 0,
     };
   },
   computed: {
     boxShadowStyle() {
       // box-shadowのbottomを生成
-      return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 0 rgba(0, 0, 0, 0.5);`;
+      return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 
+      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px rgba(0, 0, 0, 0.5);`;
     },
   },
   methods: {},
