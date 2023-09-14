@@ -11,8 +11,8 @@
       <div id="rightContainer">
         <div id="settingValueContainer">
           <h1>設定値</h1>
-          <input v-model="sliderTop" class="slider" type="range">
-          <input v-model="sliderRight" class="slider" type="range">
+          <input v-model="sliderTop" class="slider" type="range" min="-50" max="50">
+          <input v-model="sliderRight" class="slider" type="range" min="-50" max="50">
           <input v-model="sliderBottom" class="slider" type="range">
           <input v-model="sliderLeft" class="slider" type="range">
           <input type="color">
@@ -36,16 +36,16 @@
 export default {
   data() {
     return {
-      sliderTop: "",
-      sliderRight: "",
+      sliderTop: 0,
+      sliderRight: 0,
       sliderBottom: "",
       sliderLeft: "",
     };
   },
   computed: {
     boxShadowStyle() {
-      // 各パラメーターにsliderTopの値を使用してbox-shadowを生成
-      return `box-shadow: 0 ${this.sliderTop}px 0 rgba(0, 0, 0, 0.5);`;
+      // box-shadowのbottomを生成
+      return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 0 rgba(0, 0, 0, 0.5);`;
     },
   },
   methods: {},
