@@ -13,8 +13,8 @@
           <h1>設定値</h1>
           <input v-model="sliderTop" class="slider" type="range" min="-50" max="50">
           <input v-model="sliderRight" class="slider" type="range" min="-50" max="50">
-          <input v-model="sliderBlurRadius" class="slider" type="range" min="-50" max="50">
-          <input v-model="sliderSpreadRadius" class="slider" type="range" min="-50" max="50">
+          <input v-model="sliderBlurRadius" class="slider" type="range" min="0" max="100">
+          <input v-model="sliderSpreadRadius" class="slider" type="range" min="-50" max="100">
           <input type="color">
         </div>
         <div id="codeContainer">
@@ -38,7 +38,7 @@ export default {
     return {
       sliderTop: 0,
       sliderRight: 0,
-      sliderBlurRadius: 0,
+      sliderBlurRadius: 30,
       sliderSpreadRadius: 0,
     };
   },
