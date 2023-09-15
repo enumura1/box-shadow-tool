@@ -15,6 +15,7 @@
           <input v-model="sliderRight" class="slider" type="range" min="-50" max="50">
           <input v-model="sliderBlurRadius" class="slider" type="range" min="0" max="100">
           <input v-model="sliderSpreadRadius" class="slider" type="range" min="-50" max="100">
+          <input v-model="sliderTransparency" class="slider" type="range" min="0" max="1" step="0.01">
           <input type="color">
         </div>
         <div id="codeContainer">
@@ -23,6 +24,7 @@
           <p class="generatedCssCode">{{ sliderRight }}</p>
           <p class="generatedCssCode">{{ sliderBlurRadius }}</p>
           <p class="generatedCssCode">{{ sliderSpreadRadius }}</p>
+          <p class="generatedCssCode">{{ sliderTransparency }}</p>
         </div>
       </div>
     </div>
@@ -40,13 +42,14 @@ export default {
       sliderRight: 0,
       sliderBlurRadius: 30,
       sliderSpreadRadius: 0,
+      sliderTransparency: 0.5,
     };
   },
   computed: {
     boxShadowStyle() {
       // box-shadowのbottomを生成
       return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 
-      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px rgba(0, 0, 0, 0.5);`;
+      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px rgba(0, 0, 0, ${this.sliderTransparency});`;
     },
   },
   methods: {},
