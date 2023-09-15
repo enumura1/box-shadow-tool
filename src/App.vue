@@ -20,11 +20,8 @@
         </div>
         <div id="codeContainer">
           <h5>CSSコード</h5>
-          <p class="generatedCssCode">{{ sliderTop }}</p>
-          <p class="generatedCssCode">{{ sliderRight }}</p>
-          <p class="generatedCssCode">{{ sliderBlurRadius }}</p>
-          <p class="generatedCssCode">{{ sliderSpreadRadius }}</p>
-          <p class="generatedCssCode">{{ sliderTransparency }}</p>
+          <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
+            {{ sliderSpreadRadius }}px {{ sliderTransparency }}</p>
         </div>
       </div>
     </div>
