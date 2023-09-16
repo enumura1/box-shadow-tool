@@ -7,7 +7,7 @@
     <v-app-bar elevation="9" style="background-color: #1a1e2e; color: white;">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Application</v-app-bar-title>
+      <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
       <template v-slot:append>
         <v-btn>
           hoge
@@ -23,9 +23,6 @@
 
     <v-main>
       <div id="app">
-        <div id="topContainer">
-          <h1>BOX SHADOW 生成ツール</h1>
-        </div>
         <div id="mainContainer">
           <div id="leftContainer">
             <!-- 動的にbox-shadowプロパティを更新する四角形 -->
@@ -60,14 +57,14 @@
 <script setup>
 import { ref } from 'vue'
 
-const drawer = ref(null)
+const drawer = ref(false)
 </script>
 
 <script>
 export default {
   data() {
     return {
-      drawer: null,
+      drawer: false,
       sliderTop: 0,
       sliderRight: 0,
       sliderBlurRadius: 30,

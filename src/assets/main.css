@@ -6,7 +6,6 @@ body {
   background-color: aliceblue;
 }
 
-#topContainer,
 #bottomContainer {
   height: 4.5vh;
   display: flex;
@@ -19,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 93vh;
 }
 
 h1 {
