@@ -55,6 +55,11 @@ h1 {
   width: 70%;
 }
 
+.custom-slider {
+  width: 70%;
+  height: 12%;
+}
+
 #settingValueContainer {
   width: 85%;
   height: 60%;

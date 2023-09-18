@@ -9,15 +9,6 @@
 
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
       <template v-slot:append>
-        <v-btn>
-          hoge
-        </v-btn>
-
-        <v-btn>
-          <v-icon>
-            mdi-home
-          </v-icon>
-        </v-btn>
       </template>
     </v-app-bar>
 
@@ -31,11 +22,17 @@
           <div id="rightContainer">
             <div id="settingValueContainer">
               <h1>設定値</h1>
-              <input v-model="sliderTop" class="slider" type="range" min="-50" max="50">
-              <input v-model="sliderRight" class="slider" type="range" min="-50" max="50">
-              <input v-model="sliderBlurRadius" class="slider" type="range" min="0" max="100">
-              <input v-model="sliderSpreadRadius" class="slider" type="range" min="-50" max="100">
-              <input v-model="sliderTransparency" class="slider" type="range" min="0" max="1" step="0.01">
+              <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50" step="0.01"
+                class="custom-slider"></v-slider>
+              <v-slider v-model="sliderRight" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
+                step="0.01" class="custom-slider"></v-slider>
+              <v-slider v-model="sliderBlurRadius" thumb-label track-color="black" color="#2F9CEB" min="0" max="100"
+                step="0.01" class="custom-slider"></v-slider>
+              <v-slider v-model="sliderSpreadRadius" thumb-label track-color="black" color="#2F9CEB" min="-50" max="100"
+                step="0.01" class="custom-slider"></v-slider>
+              <v-slider v-model="sliderTransparency" thumb-label track-color="black" color="#2F9CEB" min="0" max="1"
+                step="0.01" class="custom-slider"></v-slider>
+              <!-- カラーパレット -->
               <input type="color">
             </div>
             <div id="codeContainer">
@@ -57,10 +54,12 @@
 <script setup>
 import { ref } from 'vue'
 
-const drawer = ref(false)
+const drawer = ref(false);
+const selectedColor = ref("#000");
 </script>
 
 <script>
+
 export default {
   data() {
     return {
@@ -74,9 +73,10 @@ export default {
   },
   computed: {
     boxShadowStyle() {
-      // box-shadowのbottomを生成
+      // box-shadowのbottomを生成 ${this.selectedColor};`;
       return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 
-      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px rgba(0, 0, 0, ${this.sliderTransparency});`;
+      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px 
+      rgba(0, 0, 0, ${this.sliderTransparency});`;
     },
   },
   methods: {},
