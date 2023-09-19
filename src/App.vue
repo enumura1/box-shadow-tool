@@ -22,17 +22,18 @@
           <div id="rightContainer">
             <div id="settingValueContainer">
               <h1>設定値</h1>
-              <div id="#sliderContainer"></div>
-              <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50" step="0.01"
-                label="影 (縦)" class="custom-slider"></v-slider>
-              <v-slider v-model="sliderRight" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
-                step="0.01" label="影 (横)" class="custom-slider"></v-slider>
-              <v-slider v-model="sliderBlurRadius" thumb-label track-color="black" color="#2F9CEB" min="0" max="100"
-                step="0.01" label="ぼかし度" class="custom-slider"></v-slider>
-              <v-slider v-model="sliderSpreadRadius" thumb-label track-color="black" color="#2F9CEB" min="-50" max="100"
-                step="0.01" label="影の範囲" class="custom-slider"></v-slider>
-              <v-slider v-model="sliderTransparency" thumb-label track-color="black" color="#2F9CEB" min="0" max="1"
-                step="0.01" label="透明度" class="custom-slider"></v-slider>
+              <div id="sliderContainer">
+                <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
+                  step="0.01" label="影 (縦)" class="custom-slider"></v-slider>
+                <v-slider v-model="sliderRight" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
+                  step="0.01" label="影 (横)" class="custom-slider"></v-slider>
+                <v-slider v-model="sliderBlurRadius" thumb-label track-color="black" color="#2F9CEB" min="0" max="100"
+                  step="0.01" label="ぼかし度" class="custom-slider"></v-slider>
+                <v-slider v-model="sliderSpreadRadius" thumb-label track-color="black" color="#2F9CEB" min="-50" max="100"
+                  step="0.01" label="影の範囲" class="custom-slider"></v-slider>
+                <v-slider v-model="sliderTransparency" thumb-label track-color="black" color="#2F9CEB" min="0" max="1"
+                  step="0.01" label="透明度" class="custom-slider"></v-slider>
+              </div>
               <!-- カラーパレット -->
               <div id="colorPickerContainer">
                 <v-color-picker v-model="c1" hide-canvas hide-inputs elevation="10"></v-color-picker>
