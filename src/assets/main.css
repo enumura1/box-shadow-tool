@@ -7,7 +7,7 @@ body {
 }
 
 #bottomContainer {
-  height: 4.5vh;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +26,7 @@ h1 {
 }
 
 #leftContainer {
-  height: 80%;
+  height: 100%;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ h1 {
 }
 
 #rightContainer {
-  height: 80%;
+  height: 100%;
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -57,12 +57,12 @@ h1 {
 
 .custom-slider {
   width: 70%;
-  height: 12%;
+  height: 10%;
 }
 
 #settingValueContainer {
   width: 85%;
-  height: 60%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,9 +70,17 @@ h1 {
   background-color: bisque;
 }
 
+#sliderContainer {
+  height: 60%;
+}
+
+#colorPickerContainer {
+  height: 40%;
+}
+
 #codeContainer {
   width: 90%;
-  height: 35%;
+  height: 25%;
   margin-top: 5%;
   background-color: antiquewhite;
   text-align: center;

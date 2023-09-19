@@ -22,6 +22,7 @@
           <div id="rightContainer">
             <div id="settingValueContainer">
               <h1>設定値</h1>
+              <div id="#sliderContainer"></div>
               <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50" step="0.01"
                 label="影 (縦)" class="custom-slider"></v-slider>
               <v-slider v-model="sliderRight" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
@@ -31,9 +32,11 @@
               <v-slider v-model="sliderSpreadRadius" thumb-label track-color="black" color="#2F9CEB" min="-50" max="100"
                 step="0.01" label="影の範囲" class="custom-slider"></v-slider>
               <v-slider v-model="sliderTransparency" thumb-label track-color="black" color="#2F9CEB" min="0" max="1"
-                step="0.01" class="custom-slider"></v-slider>
+                step="0.01" label="透明度" class="custom-slider"></v-slider>
               <!-- カラーパレット -->
-              <input type="color">
+              <div id="colorPickerContainer">
+                <v-color-picker v-model="c1" hide-canvas hide-inputs elevation="10"></v-color-picker>
+              </div>
             </div>
             <div id="codeContainer">
               <h5>CSSコード</h5>
@@ -55,7 +58,7 @@
 import { ref } from 'vue'
 
 const drawer = ref(false);
-const selectedColor = ref("#000");
+const c1 = ref('#ff00ff')
 </script>
 
 <script>
@@ -69,6 +72,7 @@ export default {
       sliderBlurRadius: 30,
       sliderSpreadRadius: 0,
       sliderTransparency: 0.5,
+      c1: '#ff00ff',
     };
   },
   computed: {
