@@ -7,11 +7,12 @@ body {
 }
 
 #bottomContainer {
+  color: white;
   height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: palevioletred;
+  background-color: #1a1e2e;
 }
 
 #mainContainer {
