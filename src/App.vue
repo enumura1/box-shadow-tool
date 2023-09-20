@@ -40,7 +40,7 @@
               </div>
             </div>
             <div id="codeContainer">
-              <h5>CSSコード</h5>
+              <h1>CSSコード</h1>
               <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
                 {{ sliderSpreadRadius }}px {{ sliderTransparency }}</p>
             </div>

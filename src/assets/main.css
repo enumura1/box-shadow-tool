@@ -48,7 +48,7 @@ h1 {
   justify-content: center;
   align-items: center;
   align-self: center;
-  background-color: aqua;
+  background-color: white;
 }
 
 .slider {
@@ -68,7 +68,13 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
+  background-color: rgb(255, 223, 185);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -5px #777777;
+}
+
+#settingValueContainer h1 {
+  margin-bottom: 5%;
 }
 
 #sliderContainer {
@@ -92,8 +98,17 @@ h1 {
   width: 85%;
   height: 25%;
   margin: 10% 0;
-  background-color: antiquewhite;
-  text-align: center;
+  background-color: rgb(255, 223, 185);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -5px #777777;
+}
+
+#codeContainer h1 {
+  margin-bottom: 7%;
 }
 
 .generatedCssCode {
