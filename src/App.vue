@@ -1,10 +1,10 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" style="background-color: #1a1e2e; color: white;">
+    <v-navigation-drawer v-model="drawer" style="background-color: #1a1e2e; color: aliceblue;">
       <!--  -->
     </v-navigation-drawer>
 
-    <v-app-bar elevation="9" style="background-color: #1a1e2e; color: white;">
+    <v-app-bar elevation="9" style="background-color: #1a1e2e; color: aliceblue;">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
