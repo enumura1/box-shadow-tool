@@ -51,39 +51,24 @@
         </div>
       </div>
     </v-main>
-
   </v-app>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue';
 
 const drawer = ref(false);
-const c1 = ref('#ff00ff')
-</script>
+const sliderTop = ref(0);
+const sliderRight = ref(0);
+const sliderBlurRadius = ref(30);
+const sliderSpreadRadius = ref(0);
+const sliderTransparency = ref(0.5);
+const c1 = ref('#ff00ff');
 
-<script>
-
-export default {
-  data() {
-    return {
-      drawer: false,
-      sliderTop: 0,
-      sliderRight: 0,
-      sliderBlurRadius: 30,
-      sliderSpreadRadius: 0,
-      sliderTransparency: 0.5,
-      c1: '#ff00ff',
-    };
-  },
-  computed: {
-    boxShadowStyle() {
-      // box-shadowのbottomを生成 ${this.selectedColor};`;
-      return `box-shadow: ${this.sliderRight}px ${this.sliderTop}px 
-      ${this.sliderBlurRadius}px ${this.sliderSpreadRadius}px 
-      rgba(0, 0, 0, ${this.sliderTransparency});`;
-    },
-  },
-  methods: {},
-}
+//　box-shadowの値を算出
+const boxShadowStyle = computed(() => {
+  return `box-shadow: ${sliderRight.value}px ${sliderTop.value}px 
+    ${sliderBlurRadius.value}px ${sliderSpreadRadius.value}px 
+    rgba(0, 0, 0, ${sliderTransparency.value});`;
+});
 </script>
