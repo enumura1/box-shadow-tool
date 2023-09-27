@@ -1,32 +1,19 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" style="background-color: #1a1e2e; color: aliceblue;">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Application
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <div style="display: flex; align-items: center;"> <!-- Flexboxを使用 -->
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </div>
-        </v-list-item>
-      </v-list>
+      <div id="drawerContents">
+        <v-list>
+          <v-list-item>
+            <v-list-item-title>ホーム</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>設定</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title>情報</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </div>
     </v-navigation-drawer>
 
     <v-app-bar elevation="9" style="background-color: #1a1e2e; color: aliceblue;">
@@ -96,19 +83,4 @@ const boxShadowStyle = computed(() => {
     ${sliderBlurRadius.value}px ${sliderSpreadRadius.value}px 
     rgba(0, 0, 0, ${sliderTransparency.value});`;
 });
-</script>
-
-<script>
-export default {
-  data() {
-    return {
-      items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'Photos', icon: 'mdi-image' },
-        { title: 'About', icon: 'mdi-help-box' },
-      ],
-      right: null,
-    }
-  },
-}
 </script>
