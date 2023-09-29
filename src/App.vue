@@ -13,12 +13,12 @@
               <v-icon class="mr-2">mdi-home</v-icon> ホーム</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/box-shadow-tool/information" style="color: aliceblue;">
+            <router-link to="/box-shadow-tool/poricy" style="color: aliceblue;">
               <v-icon class="mr-2">mdi-information-variant-box-outline</v-icon>ポリシー</router-link>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>
-              <v-icon class="mr-2">mdi-shield</v-icon>規約</v-list-item-title>
+            <router-link to="/box-shadow-tool/info" style="color: aliceblue;">
+              <v-icon class="mr-2">mdi-shield</v-icon>規約</router-link>
           </v-list-item>
         </v-list>
       </div>

@@ -12,6 +12,7 @@ import * as directives from 'vuetify/directives'
 import './assets/main.css'
 
 // ページコンポーネントのインポート
+import poricy from './components/poricy.vue'
 import Info from './components/info.vue'
 import Home from './components/Home.vue'
 import App from './App.vue'
@@ -19,7 +20,8 @@ import App from './App.vue'
 // 遷移先
 const routes = [
     { path: '/box-shadow-tool', component: Home },
-    { path: '/box-shadow-tool/information', component: Info },
+    { path: '/box-shadow-tool/poricy', component: poricy },
+    { path: '/box-shadow-tool/info', component: Info },
 ]
 
 // ルーター
