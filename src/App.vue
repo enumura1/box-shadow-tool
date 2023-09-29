@@ -4,7 +4,11 @@
       <div id="drawerContents">
         <v-list>
           <v-list-item>
-
+            <v-list-item-title class="text-h6">
+              ー Content list ー
+            </v-list-item-title>
+          </v-list-item>
+          <v-list-item>
             <router-link to="/box-shadow-tool" style="color: aliceblue;">
               <v-icon class="mr-2">mdi-home</v-icon> ホーム</router-link>
           </v-list-item>
