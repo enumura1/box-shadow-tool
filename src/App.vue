@@ -4,13 +4,17 @@
       <div id="drawerContents">
         <v-list>
           <v-list-item>
-            <router-link to="/box-shadow-tool" style="color: aliceblue;">ホーム</router-link>
+
+            <router-link to="/box-shadow-tool" style="color: aliceblue;">
+              <v-icon class="mr-2">mdi-home</v-icon> ホーム</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/box-shadow-tool/information" style="color: aliceblue;">info</router-link>
+            <router-link to="/box-shadow-tool/information" style="color: aliceblue;">
+              <v-icon class="mr-2">mdi-information-variant-box-outline</v-icon>ポリシー</router-link>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>情報</v-list-item-title>
+            <v-list-item-title>
+              <v-icon class="mr-2">mdi-shield</v-icon>規約</v-list-item-title>
           </v-list-item>
         </v-list>
       </div>
