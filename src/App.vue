@@ -4,10 +4,10 @@
       <div id="drawerContents">
         <v-list>
           <v-list-item>
-            <router-link to="/box-shadow-tool">ホーム</router-link>
+            <router-link to="/box-shadow-tool" style="color: aliceblue;">ホーム</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/box-shadow-tool/information">info</router-link>
+            <router-link to="/box-shadow-tool/information" style="color: aliceblue;">info</router-link>
           </v-list-item>
           <v-list-item>
             <v-list-item-title>情報</v-list-item-title>
