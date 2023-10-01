@@ -33,9 +33,6 @@
                 </div>
             </div>
         </div>
-        <div id="bottomContainer">
-            <h5>@enumura</h5>
-        </div>
     </div>
 </template>
 
