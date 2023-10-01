@@ -22,13 +22,14 @@
                     </div>
                     <!-- カラーパレット -->
                     <div id="colorPickerContainer">
-                        <v-color-picker v-model="c1" hide-canvas hide-inputs elevation="10"></v-color-picker>
+                        <input type="color" v-model="backgroundColor">
                     </div>
+
                 </div>
                 <div id="codeContainer">
                     <h1>CSSコード</h1>
                     <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
-                        {{ sliderSpreadRadius }}px {{ sliderTransparency }}</p>
+                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }} {{ sliderTransparency }})</p>
                 </div>
             </div>
         </div>
@@ -46,12 +47,32 @@ const sliderRight = ref(0);
 const sliderBlurRadius = ref(30);
 const sliderSpreadRadius = ref(0);
 const sliderTransparency = ref(0.5);
-const c1 = ref('#ff00ff');
+const backgroundColor = ref('#000000');
 
 //　box-shadowの値を算出
 const boxShadowStyle = computed(() => {
     return `box-shadow: ${sliderRight.value}px ${sliderTop.value}px 
     ${sliderBlurRadius.value}px ${sliderSpreadRadius.value}px 
-    rgba(0, 0, 0, ${sliderTransparency.value});`;
+    rgba(${rgbValue.value}, ${sliderTransparency.value});`;
 });
+
+// 色コードからRGB値を取得する関数
+const rgbValue = computed(() => {
+    // Get the value from the ref object
+    const hexValue = backgroundColor.value;
+    let r, g, b;
+
+    // Check if it's a 3-digit or 6-digit hex code
+    if (hexValue.length === 4) { // 3-digit hex code
+        r = parseInt(hexValue[1] + hexValue[1], 16);
+        g = parseInt(hexValue[2] + hexValue[2], 16);
+        b = parseInt(hexValue[3] + hexValue[3], 16);
+    } else if (hexValue.length === 7) { // 6-digit hex code
+        r = parseInt(hexValue.slice(1, 3), 16);
+        g = parseInt(hexValue.slice(3, 5), 16);
+        b = parseInt(hexValue.slice(5, 7), 16);
+    }
+
+    return r + ', ' + g + ', ' + b;
+})
 </script>
