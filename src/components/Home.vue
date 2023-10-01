@@ -7,7 +7,7 @@
             </div>
             <div id="rightContainer">
                 <div id="settingValueContainer">
-                    <h1>設定値</h1>
+                    <h1>BoxShadow 設定値</h1>
                     <div id="sliderContainer">
                         <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
                             step="0.01" label="影 (縦)" class="custom-slider"></v-slider>
@@ -22,14 +22,15 @@
                     </div>
                     <!-- カラーパレット -->
                     <div id="colorPickerContainer">
-                        <input type="color" v-model="backgroundColor">
+                        <p id="colorContainerText">影の色：</p>
+                        <input id="colorPicker" type="color" v-model="backgroundColor">
                     </div>
 
                 </div>
                 <div id="codeContainer">
                     <h1>CSSコード</h1>
                     <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
-                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }} {{ sliderTransparency }})</p>
+                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }} {{ sliderTransparency }});</p>
                 </div>
             </div>
         </div>

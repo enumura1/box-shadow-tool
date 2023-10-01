@@ -90,10 +90,24 @@ h1 {
 
 #colorPickerContainer {
   height: 30%;
+  width: 85%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+#colorContainerText {
+  margin-right: 10%;
+  color: rgb(105, 104, 104);
+}
+
+#colorPicker {
+  height: 40%;
+  width: 40%;
+  margin-right: 10%;
+  border: 3px solid rgb(105, 104, 104);
+  border-radius: 3px;
 }
 
 #codeContainer {
