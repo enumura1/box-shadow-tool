@@ -30,7 +30,7 @@
                 <div id="codeContainer">
                     <h1>CSSコード</h1>
                     <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
-                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }} {{ sliderTransparency }});</p>
+                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
                 </div>
             </div>
         </div>
