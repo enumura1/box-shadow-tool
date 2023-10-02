@@ -1,12 +1,6 @@
 <template>
     <div>
-        <h1>規約ページ</h1>
+        <h1>利用規約ページ</h1>
         <!-- ここに設定ページのコンテンツを追加 -->
     </div>
 </template>
-
-<script>
-export default {
-    // コンポーネントのロジックをここに追加
-}
-</script>

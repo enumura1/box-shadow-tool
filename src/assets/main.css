@@ -76,6 +76,7 @@ h1 {
 }
 
 #settingValueContainer h1 {
+  color: #272e43;
   margin-bottom: 5%;
 }
 
@@ -124,11 +125,14 @@ h1 {
 }
 
 #codeContainer h1 {
+  color: #272e43;
   margin-bottom: 7%;
 }
 
 .generatedCssCode {
+  color: #3f3f3f;
   margin: 0 auto;
+  font-weight: bold;
 }
 
 @media screen and (max-width:820px) {
