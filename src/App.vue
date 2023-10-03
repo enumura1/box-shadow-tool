@@ -18,7 +18,7 @@
           </v-list-item>
           <v-list-item>
             <router-link to="/box-shadow-tool/info" style="color: aliceblue;">
-              <v-icon class="mr-2">mdi-shield</v-icon>規約</router-link>
+              <v-icon class="mr-2">mdi-shield</v-icon>利用規約</router-link>
           </v-list-item>
         </v-list>
       </div>

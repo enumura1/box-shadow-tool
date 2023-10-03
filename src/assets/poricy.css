@@ -1,7 +1,12 @@
-body {}
-
 #poricyMainContainer {
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;

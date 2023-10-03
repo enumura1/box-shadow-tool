@@ -27,10 +27,13 @@
                     </div>
 
                 </div>
-                <div id="codeContainer">
+                <div id="generatedCssContainer">
                     <h1>生成CSSコード</h1>
-                    <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius }}px
-                        {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
+                    <div id="codeContainer">
+                        <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius
+                        }}px
+                            {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
+                    </div>
                 </div>
             </div>
         </div>
