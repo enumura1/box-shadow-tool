@@ -21,6 +21,7 @@
               <v-icon class="mr-2">mdi-shield</v-icon>利用規約</router-link>
           </v-list-item>
         </v-list>
+
       </div>
     </v-navigation-drawer>
 
@@ -29,6 +30,9 @@
 
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
       <template v-slot:append>
+        <v-icon class="mr-2">mdi-weather-night</v-icon>
+        <v-switch></v-switch>
+        <v-icon class="mr-2">mdi-white-balance-sunny</v-icon>
       </template>
     </v-app-bar>
 
