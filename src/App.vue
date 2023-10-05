@@ -30,9 +30,8 @@
 
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
       <template v-slot:append>
-        <v-icon class="mr-2">mdi-weather-night</v-icon>
-        <v-switch></v-switch>
-        <v-icon class="mr-2">mdi-white-balance-sunny</v-icon>
+        <v-switch v-model="darkTheme" @update:model-value="changeTheme"
+          :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'" hide-details inset class="mr-auto" />
       </template>
     </v-app-bar>
 
@@ -46,20 +45,17 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
+import { useTheme } from 'vuetify'
 
 const drawer = ref(false);
-const sliderTop = ref(0);
-const sliderRight = ref(0);
-const sliderBlurRadius = ref(30);
-const sliderSpreadRadius = ref(0);
-const sliderTransparency = ref(0.5);
-const c1 = ref('#ff00ff');
 
-//　box-shadowの値を算出
-const boxShadowStyle = computed(() => {
-  return `box-shadow: ${sliderRight.value}px ${sliderTop.value}px 
-    ${sliderBlurRadius.value}px ${sliderSpreadRadius.value}px 
-    rgba(0, 0, 0, ${sliderTransparency.value});`;
-});
+// theme
+const darkTheme = ref(false)
+const theme = useTheme()
+
+const changeTheme = () => {
+  theme.global.name.value = darkTheme.value ? 'dark' : 'light'
+}
+
 </script>
