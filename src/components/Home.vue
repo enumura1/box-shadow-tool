@@ -57,18 +57,16 @@ const boxShadowStyle = computed(() => {
     rgba(${rgbValue.value}, ${sliderTransparency.value});`;
 });
 
-// 色コードからRGB値を取得する関数
+// カラーコードからRGB値を取得する関数
 const rgbValue = computed(() => {
-    // Get the value from the ref object
     const hexValue = backgroundColor.value;
     let r, g, b;
 
-    // Check if it's a 3-digit or 6-digit hex code
-    if (hexValue.length === 4) { // 3-digit hex code
+    if (hexValue.length === 4) {
         r = parseInt(hexValue[1] + hexValue[1], 16);
         g = parseInt(hexValue[2] + hexValue[2], 16);
         b = parseInt(hexValue[3] + hexValue[3], 16);
-    } else if (hexValue.length === 7) { // 6-digit hex code
+    } else if (hexValue.length === 7) {
         r = parseInt(hexValue.slice(1, 3), 16);
         g = parseInt(hexValue.slice(3, 5), 16);
         b = parseInt(hexValue.slice(5, 7), 16);
