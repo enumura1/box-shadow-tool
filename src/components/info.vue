@@ -1,5 +1,5 @@
 <template>
-    <div id="poricyMainContainer">
+    <div :class="mainContainer">
         <h1>利用規約ページ</h1>
         <div id="textContainer">
             <p>
@@ -23,3 +23,12 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import { computed } from 'vue';
+import { darkTheme } from '../App.vue';
+
+const mainContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-mainContainer' : 'lightmode-mainContainer';
+})
+</script>
