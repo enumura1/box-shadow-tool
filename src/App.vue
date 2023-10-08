@@ -30,7 +30,7 @@
 
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
       <template v-slot:append>
-        <v-switch v-model="darkTheme" @update:model-value="changeTheme"
+        <v-switch v-model="darkTheme" @update:model-value="changeTheme" color="info"
           :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'" hide-details inset class="mr-auto" />
       </template>
     </v-app-bar>

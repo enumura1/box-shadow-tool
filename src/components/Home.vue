@@ -6,7 +6,7 @@
                 <div id="cssAttachedSquare" :style="boxShadowStyle"></div>
             </div>
             <div id="rightContainer">
-                <div id="settingValueContainer">
+                <div :class="settingValueContainer">
                     <h1>BoxShadow 設定値</h1>
                     <div id="sliderContainer">
                         <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
@@ -79,6 +79,10 @@ const rgbValue = computed(() => {
 
 const leftContainer = computed(() => {
     return darkTheme.value ? 'darkmode-leftContainer' : 'light-modeleftContainer';
+})
+
+const settingValueContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-settingValueContainer' : 'lightmode-settingValueContainer ';
 })
 
 </script>
