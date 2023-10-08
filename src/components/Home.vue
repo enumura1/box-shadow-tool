@@ -10,15 +10,15 @@
                     <h1>BoxShadow 設定値</h1>
                     <div id="sliderContainer">
                         <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
-                            step="0.01" label="影 (縦):" class="custom-slider"></v-slider>
+                            step="0.01" label="影 (縦):" class="custom-slider" :class="sliderLabelColor"></v-slider>
                         <v-slider v-model="sliderRight" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
-                            step="0.01" label="影 (横):" class="custom-slider"></v-slider>
+                            step="0.01" label="影 (横):" class="custom-slider" :class="sliderLabelColor"></v-slider>
                         <v-slider v-model="sliderBlurRadius" thumb-label track-color="black" color="#2F9CEB" min="0"
-                            max="100" step="0.01" label="ぼかし度:" class="custom-slider"></v-slider>
+                            max="100" step="0.01" label="ぼかし度:" class="custom-slider" :class="sliderLabelColor"></v-slider>
                         <v-slider v-model="sliderSpreadRadius" thumb-label track-color="black" color="#2F9CEB" min="-50"
-                            max="100" step="0.01" label="影の範囲:" class="custom-slider"></v-slider>
+                            max="100" step="0.01" label="影の範囲:" class="custom-slider" :class="sliderLabelColor"></v-slider>
                         <v-slider v-model="sliderTransparency" thumb-label track-color="black" color="#2F9CEB" min="0"
-                            max="1" step="0.01" label="透明度:" class="custom-slider"></v-slider>
+                            max="1" step="0.01" label="透明度:" class="custom-slider" :class="sliderLabelColor"></v-slider>
                     </div>
                     <!-- カラーパレット -->
                     <div id="colorPickerContainer">
@@ -30,7 +30,7 @@
                 <div :class="generatedCssContainer">
                     <h1>生成CSSコード</h1>
                     <div id="codeContainer">
-                        <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius
+                        <p :class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius
                         }}px
                             {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
                     </div>
@@ -89,8 +89,16 @@ const settingValueContainer = computed(() => {
     return darkTheme.value ? 'darkmode-settingValueContainer' : 'lightmode-settingValueContainer ';
 })
 
+const sliderLabelColor = computed(() => {
+    return darkTheme.value ? 'darkmode-label' : 'lightmode-label';
+})
+
 const generatedCssContainer = computed(() => {
     return darkTheme.value ? 'darkmode-generatedCssContainer' : 'lightmode-generatedCssContainer';
+})
+
+const generatedCssCode = computed(() => {
+    return darkTheme.value ? 'darkmode-generatedCssCode' : 'lightmode-generatedCssCode';
 })
 
 </script>
