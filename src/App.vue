@@ -27,12 +27,11 @@
 
     <v-app-bar elevation="9" style="background-color: #1a1e2e; color: aliceblue;">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
-      <template v-slot:append>
+      <div style="margin-right: 5%;">
         <v-switch v-model="darkTheme" @update:model-value="changeTheme" color="info"
           :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'" hide-details inset class="mr-auto" />
-      </template>
+      </div>
     </v-app-bar>
 
     <v-main>
