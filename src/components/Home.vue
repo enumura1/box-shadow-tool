@@ -5,7 +5,7 @@
                 <!-- 動的にbox-shadowプロパティを更新する四角形 -->
                 <div id="cssAttachedSquare" :style="boxShadowStyle"></div>
             </div>
-            <div id="rightContainer">
+            <div :class="rightContainer">
                 <div :class="settingValueContainer">
                     <h1>BoxShadow 設定値</h1>
                     <div id="sliderContainer">
@@ -27,7 +27,7 @@
                     </div>
 
                 </div>
-                <div id="generatedCssContainer">
+                <div :class="generatedCssContainer">
                     <h1>生成CSSコード</h1>
                     <div id="codeContainer">
                         <p class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius
@@ -81,8 +81,16 @@ const leftContainer = computed(() => {
     return darkTheme.value ? 'darkmode-leftContainer' : 'light-modeleftContainer';
 })
 
+const rightContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-rightContainer' : 'lightmode-rightContainer';
+})
+
 const settingValueContainer = computed(() => {
     return darkTheme.value ? 'darkmode-settingValueContainer' : 'lightmode-settingValueContainer ';
+})
+
+const generatedCssContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-generatedCssContainer' : 'lightmode-generatedCssContainer';
 })
 
 </script>
