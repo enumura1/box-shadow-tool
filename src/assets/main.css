@@ -143,16 +143,34 @@ h1 {
   align-items: center;
 }
 
-#colorContainerText {
+.darkmode-shadowTextcolor {
+  color: rgb(199, 199, 199);
   margin-right: 10%;
 }
 
-#colorPicker {
+.lightmode-shadowTextcolor {
+  color: rgb(101, 101, 101);
+  margin-right: 10%;
+}
+
+.darkmode-colorPicker {
   height: 40%;
   width: 40%;
   margin-right: 10%;
-  border: 3px solid rgb(105, 104, 104);
   border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  border: 3px solid white;
+}
+
+.lightmode-colorPicker {
+  height: 40%;
+  width: 40%;
+  margin-right: 10%;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #000;
+  border: 3px solid rgb(105, 104, 104);
 }
 
 .lightmode-generatedCssContainer {
@@ -194,7 +212,6 @@ h1 {
 
 .generatedCssCode {
   margin: 0 auto;
-
 }
 
 .darkmode-generatedCssCode {
@@ -203,7 +220,7 @@ h1 {
 }
 
 .lightmode-generatedCssCode {
-  color: rgb(116, 116, 116);
+  color: rgb(101, 101, 101);
   font-weight: bold;
 }
 

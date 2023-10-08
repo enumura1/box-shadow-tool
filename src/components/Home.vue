@@ -22,8 +22,8 @@
                     </div>
                     <!-- カラーパレット -->
                     <div id="colorPickerContainer">
-                        <p id="colorContainerText">影の色:</p>
-                        <input id="colorPicker" type="color" v-model="backgroundColor">
+                        <p :class="shadowTextcolor">影の色:</p>
+                        <input type="color" v-model="backgroundColor" :class="backgroundColorClass">
                     </div>
 
                 </div>
@@ -41,16 +41,25 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, watchEffect } from 'vue';
 import { darkTheme } from '../App.vue';
 
 
 const sliderTop = ref(0);
 const sliderRight = ref(0);
 const sliderBlurRadius = ref(30);
-const sliderSpreadRadius = ref(0);
+const sliderSpreadRadius = ref(18);
 const sliderTransparency = ref(0.5);
-const backgroundColor = ref('#000000');
+const backgroundColor = ref("#000000");
+
+// darkThemeフラグが変更された時
+watchEffect(() => {
+    if (darkTheme.value) {
+        backgroundColor.value = "#FFFFFF";
+    } else {
+        backgroundColor.value = "#000000";
+    }
+});
 
 //　box-shadowの値を算出
 const boxShadowStyle = computed(() => {
@@ -91,6 +100,14 @@ const settingValueContainer = computed(() => {
 
 const sliderLabelColor = computed(() => {
     return darkTheme.value ? 'darkmode-label' : 'lightmode-label';
+})
+
+const backgroundColorClass = computed(() => {
+    return darkTheme.value ? 'darkmode-colorPicker' : 'lightmode-colorPicker';
+});
+
+const shadowTextcolor = computed(() => {
+    return darkTheme.value ? 'darkmode-shadowTextcolor' : 'lightmode-shadowTextcolor';
 })
 
 const generatedCssContainer = computed(() => {
