@@ -28,7 +28,7 @@
     <v-app-bar elevation="9" style="background-color: #1a1e2e; color: aliceblue;">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-app-bar-title>BOX SHADOW 生成ツール</v-app-bar-title>
-      <div style="margin-right: 5%;">
+      <div id="switchThemeBtn">
         <v-switch v-model="darkTheme" @update:model-value="changeTheme" color="info"
           :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'" hide-details inset class="mr-auto" />
       </div>

@@ -5,12 +5,16 @@ body {
   width: 100%;
 }
 
+#switchThemeBtn {
+  margin-right: 5%;
+}
+
 #bottomContainer {
-  color: aliceblue;
   height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: aliceblue;
   background-color: #1a1e2e;
 }
 
