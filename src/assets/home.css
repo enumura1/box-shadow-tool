@@ -26,10 +26,6 @@ body {
   height: 93vh;
 }
 
-h1 {
-  margin: 0;
-}
-
 .light-modeleftContainer {
   height: 100%;
   width: 70%;
@@ -52,6 +48,10 @@ h1 {
   height: 20vw;
   width: 20vw;
   background-color: pink;
+}
+
+#sttingValueTitle {
+  margin-top: 8%;
 }
 
 .lightmode-rightContainer {
@@ -93,8 +93,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 30px;
+  box-shadow: 0px 0px 8px 0px #777777;
   font-weight: bold;
   background-color: rgb(255, 232, 205);
 }
@@ -107,11 +107,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
-  box-shadow: 0px 0px 15px -5px #777777;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px #aaaaaa;
   color: rgb(199, 199, 199);
   font-weight: bold;
-  background-color: #475479;
+  background-color: #323b54;
 }
 
 .darkmode-settingValueContainer h1 {
@@ -121,7 +121,7 @@ h1 {
 #sliderContainer {
   height: 50%;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,7 +139,7 @@ h1 {
 }
 
 #colorPickerContainer {
-  height: 30%;
+  height: 28%;
   width: 85%;
   display: flex;
   flex-direction: row;
@@ -185,9 +185,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 30px;
   background-color: rgb(255, 232, 205);
-  box-shadow: 0px 0px 15px -5px #777777;
+  box-shadow: 0px 0px 8px 0px #777777;
 }
 
 .darkmode-generatedCssContainer {
@@ -198,10 +198,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 30px;
   color: white;
-  background-color: #475479;
-  box-shadow: 0px 0px 15px -5px #777777;
+  background-color: #323b54;
+  box-shadow: 0px 0px 10px 0px #ffffff;
 }
 
 #codeContainer {
