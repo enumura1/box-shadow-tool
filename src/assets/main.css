@@ -26,13 +26,22 @@ h1 {
   margin: 0;
 }
 
-#leftContainer {
+.light-modeleftContainer {
   height: 100%;
   width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: aliceblue;
+}
+
+.darkmode-leftContainer {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272e43;
 }
 
 #cssAttachedSquare {

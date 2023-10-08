@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div id="mainContainer">
-            <div id="leftContainer">
+            <div :class="leftContainer">
                 <!-- 動的にbox-shadowプロパティを更新する四角形 -->
                 <div id="cssAttachedSquare" :style="boxShadowStyle"></div>
             </div>
@@ -42,6 +42,8 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { darkTheme } from '../App.vue';
+
 
 const sliderTop = ref(0);
 const sliderRight = ref(0);
@@ -74,4 +76,9 @@ const rgbValue = computed(() => {
 
     return r + ', ' + g + ', ' + b;
 })
+
+const leftContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-leftContainer' : 'light-modeleftContainer';
+})
+
 </script>

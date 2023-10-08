@@ -46,16 +46,17 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useTheme } from 'vuetify'
 
 const drawer = ref(false);
 
-// theme
-const darkTheme = ref(false)
-const theme = useTheme()
-
+// トグルスイッチの更新
 const changeTheme = () => {
-  theme.global.name.value = darkTheme.value ? 'dark' : 'light'
+  console.log(darkTheme.value);
 }
 
+</script>
+
+<script>
+// theme
+export const darkTheme = ref(false)
 </script>
