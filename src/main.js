@@ -10,6 +10,7 @@ import * as directives from 'vuetify/directives'
 
 // 外部ファイルのインポート
 import './assets/home.css'
+import './assets/info.css'
 import './assets/poricy.css'
 
 // ページコンポーネントのインポート

@@ -1,5 +1,5 @@
 <template>
-    <div :class="mainContainer">
+    <div :class="infoContainer">
         <h1>利用規約ページ</h1>
         <div id="textContainer">
             <p>
@@ -28,7 +28,7 @@
 import { computed } from 'vue';
 import { darkTheme } from '../App.vue';
 
-const mainContainer = computed(() => {
-    return darkTheme.value ? 'darkmode-mainContainer' : 'lightmode-mainContainer';
+const infoContainer = computed(() => {
+    return darkTheme.value ? 'darkmode-infoContainer' : 'lightmode-infoContainer';
 })
 </script>

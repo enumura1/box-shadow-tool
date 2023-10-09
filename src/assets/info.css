@@ -1,5 +1,6 @@
-.darkmode-mainContainer {
+.darkmode-infoContainer {
     height: 90vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +9,8 @@
     background-color: #141A1F;
 }
 
-.lightmode-mainContainer {
-    height: 90vh;
+.lightmode-infoContainer {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,5 +24,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4%;
+    width: 90%;
 }
