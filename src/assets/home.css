@@ -229,14 +229,19 @@ body {
 }
 
 @media screen and (max-width:820px) {
+  h1 {
+    font-size: 29px;
+  }
+
   #mainContainer {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
-  #leftContainer {
+  .darkmode-leftContainer,
+  .light-modeleftContainer {
     width: 100%;
-    margin-top: 50%;
   }
 
   #cssAttachedSquare {
@@ -247,7 +252,17 @@ body {
     margin-top: 30%;
   }
 
-  #rightContainer {
+  .darkmode-rightContainer,
+  .lightmode-rightContainer {
     width: 100%;
+  }
+
+  .darkmode-settingValueContainer,
+  .lightmode-settingValueContainer {
+    margin-top: 30%;
+  }
+
+  #colorPickerContainer {
+    height: 20vh;
   }
 }
