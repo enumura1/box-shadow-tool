@@ -262,7 +262,18 @@ body {
     margin-top: 30%;
   }
 
+  #sliderContainer {
+    width: 85%;
+    margin-left: 15%;
+    display: block;
+  }
+
   #colorPickerContainer {
+    height: 20vh;
+  }
+
+  .lightmode-generatedCssContainer,
+  .darkmode-generatedCssContainer {
     height: 20vh;
   }
 }
