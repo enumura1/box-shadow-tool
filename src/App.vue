@@ -1,6 +1,8 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" style="background-color: #1a1e2e; color: aliceblue;">
+    <v-navigation-drawer temporary v-model="drawer" style="background-image: linear-gradient(to bottom, #012c45, #000225); color: aliceblue;
+      border-top-right-radius: 20px; border-bottom-right-radius: 20px; border: 1px solid rgb(141, 141, 141);
+      box-shadow: 13.13px 5.96px 22.93px -0.11px rgba(0, 0, 0, 0.5);">
       <div id="drawerContents">
         <v-list>
           <v-list-item>
@@ -33,7 +35,7 @@
             <h2>②生成CSSコード</h2>
             <p>生成CSSコードに表示されたbox-shadowプロパティをコピーして使用します。</p>
           </div>
-          <div class="howtoSection">
+          <div class="howtoSection bottom">
             <h2>③ダークモード対応</h2>
             <p>画面右上の☀・☽スイッチを切り替えてテーマの切り替えが可能です。</p>
           </div>
