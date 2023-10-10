@@ -21,7 +21,23 @@
               <v-icon class="mr-2">mdi-shield</v-icon>利用規約</router-link>
           </v-list-item>
         </v-list>
-
+        <div id="howtoContainer">
+          <h1>- 使い方 -</h1>
+          <div class="howtoSection">
+            <h2>①BoxShadowの調整</h2>
+            <p>BoxShadowコーナー内の中にある5つのスライダーで影の度合いや色を調整します。</p>
+            <p>スライダーは左右に移動させボックスシャドウの度合いを変化させます。</p>
+            <p>BoxShadowコーナーPC版だと画面右側、スマホ版だとスクロール画面中央に表示</p>
+          </div>
+          <div class="howtoSection">
+            <h2>②生成CSSコード</h2>
+            <p>生成CSSコードに表示されたbox-shadowプロパティをコピーして使用します。</p>
+          </div>
+          <div class="howtoSection">
+            <h2>③ダークモード対応</h2>
+            <p>画面右上の☀・☽スイッチを切り替えてテーマの切り替えが可能です。</p>
+          </div>
+        </div>
       </div>
     </v-navigation-drawer>
 

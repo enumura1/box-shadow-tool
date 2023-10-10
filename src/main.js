@@ -12,6 +12,7 @@ import * as directives from 'vuetify/directives'
 import './assets/home.css'
 import './assets/info.css'
 import './assets/poricy.css'
+import './assets/App.css'
 
 // ページコンポーネントのインポート
 import poricy from './components/poricy.vue'

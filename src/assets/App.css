@@ -1,0 +1,17 @@
+#howtoContainer {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.howtoSection {
+    margin: 8% 0;
+}
+
+.howtoSection p {
+    margin: 1% 0;
+}
