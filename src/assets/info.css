@@ -1,5 +1,8 @@
+#infoTitle {
+    margin: 4% 0;
+}
+
 .darkmode-infoContainer {
-    height: 90vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -10,7 +13,6 @@
 }
 
 .lightmode-infoContainer {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +25,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     width: 90%;
 }

@@ -1,7 +1,7 @@
 <template>
     <div :class="mainContainer">
         <h1>◆プライバシーポリシーページ</h1>
-        <div id="textContainer">
+        <div id="poricyTextContainer">
             <p>利用規約に同意の上ご使用頂きますようお願い致します。</p><br>
             <p>利用規約はこちら、もしくはサイト左のバーからご覧ください。</p><br>
             <p>本サイトはローカル環境でbox-shadowのCSSを生成しており、生成したCSSの情報はサーバーに送信されません。</p><br>
@@ -16,6 +16,7 @@
 <script setup>
 import { computed } from 'vue';
 import { darkTheme } from '../App.vue';
+import '../assets/poricy.css'
 
 const mainContainer = computed(() => {
     return darkTheme.value ? 'darkmode-mainContainer' : 'lightmode-mainContainer';
