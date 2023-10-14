@@ -2,7 +2,7 @@ import { expect, describe, test } from 'vitest';
 import { mount } from '@vue/test-utils';
 
 // 外部フィアルのインポート
-import Info from './src/components/info.vue';
+import Info from '../components/info.vue';
 
 function checkContainedText(text, fectedTargetWordWords) {
     fectedTargetWordWords.forEach(fectedTargetWordWord => {
