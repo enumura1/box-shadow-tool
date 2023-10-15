@@ -130,20 +130,8 @@ export default {
         copyBtn.addEventListener('click', () => {
             // クリップボードに書き込んでコピー
             navigator.clipboard.writeText(boxshadowpp.textContent);
-
-            // ボタンの背景色を赤色に変更
-            copyBtn.style.backgroundColor = 'red';
-
-            // アラートが非同期で表示されるため、setTimeoutを使用して背景色の変更を遅らせる
-            setTimeout(() => {
-                if (!alert("box-shadowプロパティのCSSをコピーできました。")) {
-                    console.log("clicked");
-                    // ボタンの背景色を元に戻す
-                    copyBtn.style.backgroundColor = 'white';
-                }
-            }, 0); // 0ミリ秒後に実行されるため、ほとんど即座に実行されます
+            alert("box-shadowプロパティのCSSをコピー完了。")
         });
-
     }
 }
 </script>
