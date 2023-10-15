@@ -7,7 +7,7 @@
             </div>
             <div :class="rightContainer">
                 <div :class="settingValueContainer">
-                    <h1 id="sttingValueTitle">BoxShadow 設定値</h1>
+                    <h2 id="sttingValueTitle">BoxShadow 設定値</h2>
                     <div id="sliderContainer">
                         <v-slider v-model="sliderTop" thumb-label track-color="black" color="#2F9CEB" min="-50" max="50"
                             step="0.01" label="影 (縦):" class="custom-slider" :class="sliderLabelColor"></v-slider>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div :class="generatedCssContainer">
-                    <h1>生成CSSコード</h1>
+                    <h2>生成CSSコード</h2>
                     <div id="codeContainer">
                         <p :class="generatedCssCode" id="bspp">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{
                             sliderBlurRadius

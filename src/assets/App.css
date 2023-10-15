@@ -8,6 +8,10 @@
     align-items: center;
 }
 
+#pageTitle {
+    font-size: 1.4rem;
+}
+
 .howtoSection {
     margin: 8% 0;
 }
@@ -24,4 +28,10 @@
 
 .howtoSection.bottom {
     margin-bottom: 10vh;
+}
+
+@media screen and (max-width:820px) {
+    #pageTitle {
+        font-size: 1rem;
+    }
 }

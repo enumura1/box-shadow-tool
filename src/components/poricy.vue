@@ -1,6 +1,6 @@
 <template>
     <div :class="mainContainer">
-        <h1>◆プライバシーポリシーページ</h1>
+        <h1 id="poricyTitle">◆プライバシーポリシーページ</h1>
         <div id="poricyTextContainer">
             <p>利用規約に同意の上ご使用頂きますようお願い致します。</p><br>
             <p>サイト左のメニューボタンをタップし、表示される項目から「利用規約」をタップしご覧ください。</p><br>

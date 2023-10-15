@@ -1,3 +1,7 @@
+#poricyTitle {
+    text-align: center;
+}
+
 .darkmode-mainContainer {
     height: 90vh;
     display: flex;

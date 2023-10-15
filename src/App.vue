@@ -24,7 +24,7 @@
           </v-list-item>
         </v-list>
         <div id="howtoContainer">
-          <h1>- 使い方 -</h1>
+          <h2>- 使い方 -</h2>
           <div class="howtoSection">
             <h2>①BoxShadowの調整</h2>
             <p>BoxShadowコーナー内の中にある5つのスライダーで影の度合いや色を調整します。</p>
@@ -45,7 +45,9 @@
 
     <v-app-bar elevation="9" style="background-color: #1a1e2e; color: aliceblue;">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title>BOX SHADOW 生成ツール（ダーク・ライトモード対応）</v-app-bar-title>
+      <v-app-bar-title>
+        <h1 id="pageTitle">BOX SHADOW 生成ツール（ダーク・ライトモード対応）</h1>
+      </v-app-bar-title>
       <div id="switchThemeBtn">
         <v-switch v-model="darkTheme" @update:model-value="changeTheme" color="info"
           :prepend-icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'" hide-details inset class="mr-auto" />
