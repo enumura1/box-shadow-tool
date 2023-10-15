@@ -124,10 +124,13 @@ const copyToClipboard = () => {
 
     // クリップボードに書き込んでコピー
     navigator.clipboard.writeText(boxshadowpp.textContent)
+        // コピーに成功
         .then(() => {
             alert("box-shadowプロパティのCSSをコピー完了。");
         })
+        // コピーに失敗
         .catch((error) => {
+            alert("box-shadowプロパティのCSSのコピーに失敗しました。");
             console.error('Failed to copy: ', error);
         });
 }
