@@ -10,7 +10,7 @@ https://enumura1.github.io/box-shadow-tool/
 1. If necessary, change to dark mode by toggling the switch in the upper right corner of the screen. The default is light mode.
 2. Adjust the slider to adjust the value of the box-shadow property.
 3. You can also change the background color of the shadow from the color palette.
-4. You can copy the CSS for the output box-shadow property.
+4. You can copy the CSS for the output box-shadow property.On a PC, you can copy the generated box-shadow property css to the clipboard by clicking the Copy button in the generated CSS code container.
 
 # 🌙theme
 Dark and light modes are supported.
