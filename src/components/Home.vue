@@ -25,15 +25,16 @@
                         <p :class="shadowTextcolor">影の色:</p>
                         <input type="color" v-model="backgroundColor" :class="backgroundColorClass">
                     </div>
-
                 </div>
                 <div :class="generatedCssContainer">
                     <h1>生成CSSコード</h1>
                     <div id="codeContainer">
-                        <p :class="generatedCssCode">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{ sliderBlurRadius
+                        <p :class="generatedCssCode" id="bspp">box-shadow: {{ sliderTop }}px {{ sliderRight }}px {{
+                            sliderBlurRadius
                         }}px
                             {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
                     </div>
+                    <button id="copyButton">コピー</button>
                 </div>
             </div>
         </div>
@@ -117,5 +118,32 @@ const generatedCssContainer = computed(() => {
 const generatedCssCode = computed(() => {
     return darkTheme.value ? 'darkmode-generatedCssCode' : 'lightmode-generatedCssCode';
 })
+</script>
 
+<script>
+export default {
+    // マウント後にDOMにアクセス
+    mounted() {
+        const copyBtn = document.getElementById("copyButton");
+        const boxshadowpp = document.getElementById("bspp");
+
+        copyBtn.addEventListener('click', () => {
+            // クリップボードに書き込んでコピー
+            navigator.clipboard.writeText(boxshadowpp.textContent);
+
+            // ボタンの背景色を赤色に変更
+            copyBtn.style.backgroundColor = 'red';
+
+            // アラートが非同期で表示されるため、setTimeoutを使用して背景色の変更を遅らせる
+            setTimeout(() => {
+                if (!alert("box-shadowプロパティのCSSをコピーできました。")) {
+                    console.log("clicked");
+                    // ボタンの背景色を元に戻す
+                    copyBtn.style.backgroundColor = 'white';
+                }
+            }, 0); // 0ミリ秒後に実行されるため、ほとんど即座に実行されます
+        });
+
+    }
+}
 </script>
