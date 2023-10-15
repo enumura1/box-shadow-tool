@@ -34,7 +34,7 @@
                         }}px
                             {{ sliderSpreadRadius }}px rgba({{ rgbValue }}, {{ sliderTransparency }});</p>
                     </div>
-                    <button id="copyButton">コピー</button>
+                    <button id="copyButton" @click="copyToClipboard" v-if="screenWidth >= 820">コピー</button>
                 </div>
             </div>
         </div>
@@ -118,20 +118,21 @@ const generatedCssContainer = computed(() => {
 const generatedCssCode = computed(() => {
     return darkTheme.value ? 'darkmode-generatedCssCode' : 'lightmode-generatedCssCode';
 })
-</script>
 
-<script>
-export default {
-    // マウント後にDOMにアクセス
-    mounted() {
-        const copyBtn = document.getElementById("copyButton");
-        const boxshadowpp = document.getElementById("bspp");
+const copyToClipboard = () => {
+    const boxshadowpp = document.getElementById("bspp");
 
-        copyBtn.addEventListener('click', () => {
-            // クリップボードに書き込んでコピー
-            navigator.clipboard.writeText(boxshadowpp.textContent);
-            alert("box-shadowプロパティのCSSをコピー完了。")
+    // クリップボードに書き込んでコピー
+    navigator.clipboard.writeText(boxshadowpp.textContent)
+        .then(() => {
+            alert("box-shadowプロパティのCSSをコピー完了。");
+        })
+        .catch((error) => {
+            console.error('Failed to copy: ', error);
         });
-    }
 }
+
+// コピーボタンを表示・非表示のため
+const screenWidth = computed(() => window.innerWidth);
+
 </script>
