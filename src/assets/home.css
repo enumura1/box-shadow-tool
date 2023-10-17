@@ -91,7 +91,7 @@ h2 {
 
 .lightmode-settingValueContainer {
   width: 85%;
-  height: 54%;
+  height: 52%;
   margin-top: 10%;
   display: flex;
   flex-direction: column;
@@ -105,7 +105,7 @@ h2 {
 
 .darkmode-settingValueContainer {
   width: 85%;
-  height: 54%;
+  height: 52%;
   margin-top: 10%;
   display: flex;
   flex-direction: column;
@@ -163,7 +163,7 @@ h2 {
 
 .darkmode-colorPicker {
   height: 43%;
-  width: 40%;
+  width: 35%;
   margin-right: 10%;
   border-radius: 3px;
   background-color: #333;
@@ -173,7 +173,7 @@ h2 {
 
 .lightmode-colorPicker {
   height: 43%;
-  width: 40%;
+  width: 35%;
   margin-right: 10%;
   border-radius: 3px;
   background-color: #fff;
@@ -183,7 +183,7 @@ h2 {
 
 .lightmode-generatedCssContainer {
   width: 85%;
-  height: 31%;
+  height: 35%;
   margin: 10% 0;
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@ h2 {
 
 .darkmode-generatedCssContainer {
   width: 85%;
-  height: 31%;
+  height: 35%;
   margin: 10% 0;
   display: flex;
   flex-direction: column;
@@ -209,8 +209,9 @@ h2 {
 }
 
 #codeContainer {
-  width: 70%;
+  width: 80%;
   margin-top: 6%;
+  font-size: 1.4rem;
 }
 
 .generatedCssCode {
